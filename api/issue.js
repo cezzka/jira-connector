@@ -884,7 +884,7 @@ function IssueClient(jiraClient) {
      */
     this.addWorkLog = function (opts, callback) {
         var options = {
-            uri: this.jiraClient.buildURL('issue/' + opts.issueId || opts.issueKey + '/worklog'),
+            uri: this.jiraClient.buildURL('/issue/' + opts.issueKey + '/worklog'),
             method: 'POST',
             json: true,
             followAllRedirects: true,
